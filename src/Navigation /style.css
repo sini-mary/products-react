@@ -1,0 +1,10 @@
+.Addbtn{
+    background:#4CAF50 ;
+    color: white;
+    border: none;
+    
+    font-size: 16px;
+    cursor: pointer;
+    height:40%;
+    width: 70px;
+}

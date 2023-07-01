@@ -1,0 +1,29 @@
+.form{
+    width: 50%;
+    margin: 0 auto;
+    border: solid black;
+    border: none;
+}
+.form > input{
+    padding: 12px 20px;
+    width:  70%;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.form > button{
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    background-color: green;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition:.3s ease all;
+}
+
+
+
+
+
+
+
