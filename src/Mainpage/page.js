@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './page.css'
-
+import { Link } from "react-router-dom";
 
 
 
@@ -27,29 +27,35 @@ const MainPage = () => {
   };
   console.log({products});
   return (
-    
+    <div>
+      <Link to={`/AddProducts`}>      <div><button className="add">Add Product</button></div>
+</Link>
     <div className="container">
-     
-
       {products.map 
             ((product)=>(
-                < >
-                
+                <div>
+                  <div className="img">
                 <img alt="img" src={product.images[2]} className="images"/>
-                
-                <h3>{product.title}</h3>
+                </div>
+                <h3 className="title">{product.title}</h3>
                 <br/>
                 <p>{product.price}</p>
-                <br/>
+                
                 <p>{product.discountPercentage}</p>
+                <Link to={`/Details/${product.id}` }   id="btn">
+            <button type="submit" className="view">View</button >
+
+          </Link>
+          
+           </div>
 
 
-                </>
+               
                 ))}
       
       
     </div>
-
+</div>
   );
 };
 

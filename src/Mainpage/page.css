@@ -1,11 +1,47 @@
 .container{
+    
+    margin-left: 10%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    /* gap: 1rem */
+    grid-template-columns:  repeat(3,2fr);
+
+
+    
+
 
 }
 .images{
-    width:20%;
-    /* height: auto; */
+    width:90%;
+    border: rgb(146, 61, 0) solid 1px;
+    height: 470px;
+    box-shadow: black;
+
+
+
+
     
+}
+.title{
+    color: rgb(70, 70, 19);
+    
+
+}
+
+.view{
+    margin-bottom: 130px;
+    width: 130px;
+    height: 40px;
+    background-color: rgb(110, 110, 33);
+    border: none;
+    border-radius: 3px;
+    color: aliceblue;
+    
+}
+.add{
+    width: 140px;
+    height: 60px;
+    background-color: #898121;
+    color:aliceblue;
+
+
+
 }

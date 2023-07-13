@@ -1,29 +1,35 @@
+import AddProductPage from './AddProducts/add';
+import Details from './Details';
 import Login from './Login';
 import MainPage from './Mainpage/page';
 
 
-import Navbar from './Navigation ';
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter as Router,Routes,Route, Navigate} from "react-router-dom";
 
 
 
 
 function App() {
   return (
-    <div >
+    
       
-      <Navbar/>
-      
+      <Router>
+      <Routes>  
+      <Route path='/Details/:viewId' element={<Details/>}/>
 
-      <BrowserRouter>
-      <Routes>
-        <Route path="/Login" element={<Login />}></Route>
-        <Route path="/Mainpage" element={<MainPage />}></Route>
+        <Route path='/Login' element={<Login/>}/>
+        <Route path="/MainPage" element={<MainPage/>}/>
+        <Route path="/AddProducts" element={<AddProductPage/>}/>
 
+        <Route path="*"  element={<Navigate to="/Login"/>}/>
+
+        
       </Routes>
-      </BrowserRouter>
       
-    </div>
+      </Router>
+
+      
+    
   );
 }
 

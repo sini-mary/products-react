@@ -1,63 +1,18 @@
-// import React, { useState } from "react";
-
-
-// const LoginPage = () => {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-
-//     if (username === "admin" && password === "123") {
-//       localStorage.setItem("token", "T");
-//                                                              ;
-//     } else {
-//       alert("Invalid username or password");
-//     }
-//   };
-
-//   return (
-//     <div className="container">
-//       <h1>Login Page</h1>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Username"
-//           value={username}
-//           onChange={(event) => setUsername(event.target.value)}
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           value={password}
-//           onChange={(event) => setPassword(event.target.value)}
-//         />
-
-//       <button type="submit" className="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default LoginPage;
-
-
 import React, { useState } from "react";
 import './style.css';
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  console.log(username);
-  console.log(password);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      username: username,
+      user: username,
       password: password
     };
-    console.log(data);
 
     try {
       const response = await fetch('https://dummyjson.com/auth/login', {
@@ -77,14 +32,13 @@ const Login = () => {
 
   return (
     <div>
+      <h3 className="heading">Login</h3>
       <form className="form" onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
         <input
           type="text"
           placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
         />
-
         <br />
         <br />
         <input
@@ -94,7 +48,10 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="submit" className='btn btn-primary'>Login</button>
+        
+        <Link to="/MainPage">
+          <button className='btn1'>Login</button>
+          </Link>
       </form>
     </div>
   );
