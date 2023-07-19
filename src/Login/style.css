@@ -18,11 +18,16 @@
     color: #E7B10A;
     cursor: pointer;
     transition:.5s ease all;
-    background-color: black;
+    background-color: brown;
     margin: 0 auto;
+    
 
     
 
+
+}
+.btn1:hover{
+    background-color: aliceblue;
 
 }
 
