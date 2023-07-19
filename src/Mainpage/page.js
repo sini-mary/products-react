@@ -35,7 +35,7 @@ const MainPage = () => {
             ((product)=>(
                 <div>
                   <div className="img">
-                <img alt="img" src={product.images[2]} className="images"/>
+                <img alt="img" src={product.images[0]} className="images"/>
                 </div>
                 <h3 className="title">{product.title}</h3>
                 <br/>
